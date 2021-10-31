@@ -8,7 +8,7 @@ import java.util.Objects;
  * Класс, отвечающий за носитель информации, наследующий проигрывающее
  * устройство
  */
-public class Storing_Device extends Play_Device {
+public class Storing_Device {
 	private String device_type;
 	private ArrayList<String> singer = new ArrayList<>();
 	private ArrayList<String> songs = new ArrayList<>();
