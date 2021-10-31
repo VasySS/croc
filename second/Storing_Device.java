@@ -62,8 +62,9 @@ public class Storing_Device extends Play_Device {
 	 * Вывод списка песен
 	 */
 	public void printListOfSongs() {
-		for (int i = 0; i < songs.size(); i++)
+		for (int i = 0; i < songs.size(); i++) {
 			System.out.printf("%d. Исполнитель: %s, песня: %s%n", i + 1, getSong(i).get(0), getSong(i).get(1));
+		}
 	}
 
 	/**
@@ -86,8 +87,9 @@ public class Storing_Device extends Play_Device {
 		if (storing_Device instanceof Storing_Device) {
 			Storing_Device d = (Storing_Device) storing_Device;
 			return this.device_type == d.device_type;
-		} else
+		} else {
 			return false;
+		}
 
 	}
 

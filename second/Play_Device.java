@@ -2,6 +2,9 @@ package second;
 
 import java.util.Objects;
 
+/**
+ * Класс, отвечающий за проигрывающее устройство
+ */
 public class Play_Device {
 	private String device_type;
 	private Storing_Device storing_Device;
@@ -29,10 +32,11 @@ public class Play_Device {
 	 * @param device - устройство хранения
 	 */
 	public void setStoringDevice(Storing_Device device) {
-		if (this.device_type == device.getType() || this.device_type == "UNIVERSAL")
+		if (this.device_type == device.getType() || this.device_type == "UNIVERSAL") {
 			this.storing_Device = device;
-		else
+		} else {
 			System.out.printf("Проигрывающее устройство и тип носителя не совместимы.%n");
+		}
 	}
 
 	/**
@@ -60,8 +64,9 @@ public class Play_Device {
 		if (play_Device instanceof Play_Device) {
 			Play_Device p = (Play_Device) play_Device;
 			return this.device_type == p.device_type;
-		} else
+		} else {
 			return false;
+		}
 	}
 
 	@Override
