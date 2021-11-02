@@ -5,8 +5,7 @@ import java.util.Arrays;
 import java.util.Objects;
 
 /**
- * Класс, отвечающий за носитель информации, наследующий проигрывающее
- * устройство
+ * Класс, отвечающий за носитель информации
  */
 public class Storing_Device {
 	private String device_type;
