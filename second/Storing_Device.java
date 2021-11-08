@@ -5,26 +5,16 @@ import java.util.Arrays;
 import java.util.Objects;
 
 /**
- * Класс, отвечающий за носитель информации
+ * Абстрактный класс, отвечающий за носитель информации
  */
-public class Storing_Device {
-	private String device_type;
-	private ArrayList<String> singer = new ArrayList<>();
-	private ArrayList<String> songs = new ArrayList<>();
+public abstract class Storing_Device {
+	protected ArrayList<String> singer = new ArrayList<>();
+	protected ArrayList<String> songs = new ArrayList<>();
 
 	/**
 	 * Конструктор по умолчанию
 	 */
 	public Storing_Device() {
-	}
-
-	/**
-	 * Создание устройства хранения песен
-	 * 
-	 * @param device_type - тип устройства (USB,VINYL,CD и т.д.)
-	 */
-	public Storing_Device(String device_type) {
-		this.device_type = device_type;
 	}
 
 	/**
@@ -49,15 +39,6 @@ public class Storing_Device {
 	}
 
 	/**
-	 * Получение типа устройства
-	 * 
-	 * @return - тип
-	 */
-	public String getType() {
-		return this.device_type;
-	}
-
-	/**
 	 * Вывод списка песен
 	 */
 	public void printListOfSongs() {
@@ -77,15 +58,12 @@ public class Storing_Device {
 	}
 
 	@Override
-	public String toString() {
-		return String.format("Тип устройства: %s, количество песен: %s%n", device_type, singer.size());
-	}
+	public abstract String toString();
 
 	@Override
 	public boolean equals(Object storing_Device) {
 		if (storing_Device instanceof Storing_Device) {
-			Storing_Device d = (Storing_Device) storing_Device;
-			return this.device_type == d.device_type;
+			return true;
 		} else {
 			return false;
 		}
