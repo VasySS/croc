@@ -8,5 +8,6 @@ public class Main {
 		cf.setX(7);
 		cf.setY(7);
 		System.out.println(cf.toString());
+		cf.setX(8);
 	}
 }

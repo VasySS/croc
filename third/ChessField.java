@@ -19,12 +19,9 @@ public class ChessField {
 	 * @param x - координата x
 	 * @param y - координата y
 	 */
-	public ChessField(int x, int y) {
-		if (x < 0 || x > 7 || y < 0 || y > 7) {
-			throw new IllegalArgumentException();
-		}
-		this.x = x;
-		this.y = y;
+	public ChessField(int x, int y) throws IllegalArgumentException {
+		setX(x);
+		setY(y);
 	}
 
 	/**
@@ -32,7 +29,7 @@ public class ChessField {
 	 * 
 	 * @param x - координата x
 	 */
-	public void setX(int x) {
+	public void setX(int x) throws IllegalArgumentException {
 		if (x < 0 || x > 7) {
 			throw new IllegalArgumentException();
 		}
@@ -44,7 +41,7 @@ public class ChessField {
 	 * 
 	 * @param y - координата y
 	 */
-	public void setY(int y) {
+	public void setY(int y) throws IllegalArgumentException {
 		if (y < 0 || y > 7) {
 			throw new IllegalArgumentException();
 		}
