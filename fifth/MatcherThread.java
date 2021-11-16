@@ -13,6 +13,7 @@ public class MatcherThread extends Thread {
 	 * Конструктор класса
 	 * 
 	 * @param INPUT_STRING - строка для обработки
+	 * @param TEMPLATE     - символ для сравнения
 	 */
 	public MatcherThread(String INPUT_STRING, String TEMPLATE) {
 		this.INPUT_STRING = INPUT_STRING;
