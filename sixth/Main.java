@@ -24,7 +24,7 @@ public class Main {
 			// Проверка на подачу элемента ".."
 			if ((dq.isEmpty() || dq.getLast().equals("..")) && str.equals("..")) {
 				dq.add(".."); // Добавление ".." если последний элемент в очереди не директория
-			} else if (!dq.isEmpty() && str.equals("..") && dq.getLast().charAt(str.length() - 1) != ':') {
+			} else if (!dq.isEmpty() && str.equals("..") && dq.getLast().charAt(dq.getLast().length() - 1) != ':') {
 				dq.removeLast(); // Удаление директории, не являющейся корневой, в противном случае
 			}
 
