@@ -1,0 +1,101 @@
+[{
+  "seller_id": 7,
+  "goods_id": 6,
+  "price": 38.56,
+  "amount": 36
+}, {
+  "seller_id": 4,
+  "goods_id": 9,
+  "price": 39.9,
+  "amount": 57
+}, {
+  "seller_id": 10,
+  "goods_id": 3,
+  "price": 20.31,
+  "amount": 1
+}, {
+  "seller_id": 3,
+  "goods_id": 9,
+  "price": 4.18,
+  "amount": 47
+}, {
+  "seller_id": 3,
+  "goods_id": 2,
+  "price": 32.11,
+  "amount": 53
+}, {
+  "seller_id": 5,
+  "goods_id": 10,
+  "price": 19.39,
+  "amount": 21
+}, {
+  "seller_id": 6,
+  "goods_id": 5,
+  "price": 43.23,
+  "amount": 20
+}, {
+  "seller_id": 9,
+  "goods_id": 5,
+  "price": 21.12,
+  "amount": 45
+}, {
+  "seller_id": 4,
+  "goods_id": 3,
+  "price": 48.29,
+  "amount": 93
+}, {
+  "seller_id": 4,
+  "goods_id": 7,
+  "price": 9.92,
+  "amount": 66
+}, {
+  "seller_id": 2,
+  "goods_id": 8,
+  "price": 43.19,
+  "amount": 15
+}, {
+  "seller_id": 3,
+  "goods_id": 4,
+  "price": 2.8,
+  "amount": 69
+}, {
+  "seller_id": 4,
+  "goods_id": 9,
+  "price": 7.44,
+  "amount": 100
+}, {
+  "seller_id": 2,
+  "goods_id": 8,
+  "price": 44.4,
+  "amount": 54
+}, {
+  "seller_id": 7,
+  "goods_id": 6,
+  "price": 23.11,
+  "amount": 35
+}, {
+  "seller_id": 10,
+  "goods_id": 7,
+  "price": 19.04,
+  "amount": 31
+}, {
+  "seller_id": 5,
+  "goods_id": 8,
+  "price": 5.61,
+  "amount": 10
+}, {
+  "seller_id": 2,
+  "goods_id": 3,
+  "price": 14.01,
+  "amount": 10
+}, {
+  "seller_id": 3,
+  "goods_id": 6,
+  "price": 11.41,
+  "amount": 63
+}, {
+  "seller_id": 2,
+  "goods_id": 6,
+  "price": 41.87,
+  "amount": 79
+}]
