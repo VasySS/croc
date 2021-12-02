@@ -8,6 +8,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
@@ -44,31 +46,8 @@ public class Main {
 	 * @return - название товара
 	 */
 	public static String getProductName(int id, Goods[] goods) {
-		for (Goods good : goods) {
-			if (good.getId() == id) {
-				return good.getGoodsName();
-			}
-		}
-		return "name not found";
-	}
-
-	/**
-	 * Возвращает среднее количество проданного товара за день
-	 * 
-	 * @param date  - дата
-	 * @param solds - массив с данными продаж
-	 * @return - среднее количество продаж
-	 */
-	public static double getAverageByDate(Date date, SoldAmount[] solds) {
-		double avg = 0.0;
-		double i = 0.0;
-		for (SoldAmount sold : solds) {
-			if (sold.getDate().equals(date)) {
-				avg += sold.getSoldAmount();
-				i++;
-			}
-		}
-		return (avg / i);
+		return Stream.of(goods).filter(good -> good.getId() == id).map(Goods::getGoodsName).findFirst()
+				.orElse("name not found");
 	}
 
 	/**
@@ -140,16 +119,11 @@ public class Main {
 	 */
 	public static void secondTask(SoldAmount[] solds) {
 		// Создание Map для хранения даты и среднего количества продаж
-		Map<Date, Double> map = new HashMap<>();
-		for (SoldAmount sold : solds) {
-			Date date = sold.getDate();
-			if (!map.containsKey(date))
-				map.put(date, getAverageByDate(date, solds));
-		}
-
+		Map<Date, Double> avg = Stream.of(solds)
+				.collect(Collectors.groupingBy(SoldAmount::getDate, Collectors.averagingDouble(SoldAmount::getSoldAmount)));
 		// Создание отсортированного множества
 		LinkedHashMap<Date, Double> sorted_map = new LinkedHashMap<>();
-		map.entrySet()
+		avg.entrySet()
 				.stream()
 				.sorted(Map.Entry.comparingByKey(Comparator.naturalOrder()))
 				.forEachOrdered(x -> sorted_map.put(x.getKey(), x.getValue()));
